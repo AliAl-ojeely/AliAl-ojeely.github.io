@@ -10,7 +10,7 @@ export default function PortfolioCard({ item, isExpanded, onToggle }) {
         >
             {/* Main thumbnail – only if image exists */}
             {item.image && (
-                <img src={item.image} alt={item.title} className={styles.image} />
+                <img src={item.image} alt={item.title} className={styles.image} loading="lazy" />
             )}
 
             <div className={styles.body}>
@@ -68,6 +68,7 @@ export default function PortfolioCard({ item, isExpanded, onToggle }) {
                                     src={imgPath}
                                     alt={`${item.title} screenshot ${index + 1}`}
                                     className={styles.galleryImg}
+                                    loading="lazy"
                                 />
                             </a>
                         ))}

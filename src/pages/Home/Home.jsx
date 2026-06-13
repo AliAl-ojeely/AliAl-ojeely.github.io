@@ -32,7 +32,12 @@ export default function Home() {
             {/* HERO */}
             <section id="home" className={styles.hero}>
                 <div className={styles.heroRow}>
-                    <img src={profilePhoto} alt="Ali Al-Ojeely" className={styles.profilePic} />
+                    <img
+                        src={profilePhoto}
+                        alt="Ali Al-Ojeely"
+                        className={styles.profilePic}
+                        loading="lazy"
+                    />
                     <div className={styles.heroText}>
                         <h1 className={styles.name}>Ali Nasser Al‑Ojeely</h1>
                         <p className={styles.title}>Software Developer</p>
