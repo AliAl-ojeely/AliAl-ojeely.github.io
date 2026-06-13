@@ -1,0 +1,48 @@
+.card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.body {
+    padding: 1.5rem;
+}
+
+.body h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.body p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.techBadge {
+    background: var(--color-primary-light);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
