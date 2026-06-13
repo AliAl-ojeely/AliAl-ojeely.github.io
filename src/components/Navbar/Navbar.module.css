@@ -1,37 +1,129 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navbar-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: var(--color-primary);
-    color: white;
-    box-shadow: var(--shadow);
+    padding: 0 2rem;
+    background: transparent;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
     color: white;
-    text-decoration: none;
+    white-space: nowrap;
 }
 
+/* Hamburger button – hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Simple hamburger animation when open (optional) */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Desktop navigation */
 .nav {
     display: flex;
     gap: 2rem;
 }
 
-.nav a {
+.nav button {
+    background: none;
+    border: none;
     color: white;
+    font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
     transition: opacity 0.2s;
-    text-decoration: none;
 }
 
-.nav a:hover {
+.nav button:hover {
     opacity: 0.8;
 }
 
-.active {
-    text-decoration: underline;
-    text-underline-offset: 6px;
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .navOpen {
+        transform: translateY(0);
+    }
+
+    .nav button {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 0.8rem;
+    }
 }

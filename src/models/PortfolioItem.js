@@ -4,18 +4,29 @@ export default class PortfolioItem extends BaseModel {
     static #records = [];
     static #idIndex = null;
 
-    constructor({ id, title, description, image, technologies = [] } = {}) {
-        super({ id, title, description, image, technologies });
+    constructor({
+        id,
+        title,
+        description,
+        image,
+        technologies = [],
+        reason = '',
+        githubLink = '',
+        images = [],         // optional array of additional image paths
+    } = {}) {
+        super({ id, title, description, image, technologies, reason, githubLink, images });
     }
 
-    // Public getters (encapsulation with convenience)
     get id() { return this._get('id'); }
     get title() { return this._get('title'); }
     get description() { return this._get('description'); }
     get image() { return this._get('image'); }
-    get technologies() { return [...this._get('technologies')]; } // return a copy
+    get technologies() { return [...this._get('technologies')]; }
+    get reason() { return this._get('reason'); }
+    get githubLink() { return this._get('githubLink'); }
+    get images() { return [...this._get('images')]; }
 
-    // ---- Active Record instance methods ----
+    // ---- Active Record methods unchanged ----
     save() {
         const existingIndex = PortfolioItem.#records.findIndex(
             (r) => r._get('id') === this._get('id')
@@ -31,12 +42,10 @@ export default class PortfolioItem extends BaseModel {
         return this;
     }
 
-    // ---- Active Record static finders ----
     static find(id) {
         if (PortfolioItem.#idIndex) {
             return PortfolioItem.#idIndex.get(id) || null;
         }
-        // O(n) fallback
         return PortfolioItem.#records.find((r) => r._get('id') === id) || null;
     }
 
@@ -53,7 +62,6 @@ export default class PortfolioItem extends BaseModel {
         );
     }
 
-    // Override polymorphic display
     display() {
         return `${this.title} – ${this.description}`;
     }

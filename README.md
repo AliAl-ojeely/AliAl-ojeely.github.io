@@ -116,6 +116,5 @@ npm run build
 
 
 ## 📬 Contact
-
-** Email: alialojeely@gmail.com
+ Email: alialojeely@gmail.com
 Location: Yemen, Mukalla
