@@ -50,8 +50,11 @@ ALIAL-OJEELY/
 │   │   │   ├── Navbar.jsx
 │   │   │   └── Navbar.module.css
 │   │   └── PortfolioCard/
-│   │       ├── PortfolioCard.jsx
-│   │       └── PortfolioCard.module.css
+│   │   │   ├── PortfolioCard.jsx
+│   │   │   └── PortfolioCard.module.css
+│   │   └── ScrollToTop/
+│   │       ├── ScrollToTop.jsx
+│   │       └── ScrollToTop.module.css
 │   ├── models/
 │   │   ├── BaseModel.js
 │   │   └── PortfolioItem.js
