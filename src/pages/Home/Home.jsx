@@ -9,7 +9,7 @@ import RevealOnScroll from '../../components/RevealOnScroll/RevealOnScroll';
 import useTypingRotate from '../../hooks/useTypingRotate';
 import styles from './Home.module.css';
 
-const profilePhoto = '/profile.jpg';
+const profilePhoto = '/profile.webp';
 const cvFile = '/Ali_Al-Ojeely_CV.pdf';
 
 export default function Home() {

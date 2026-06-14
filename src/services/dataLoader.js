@@ -14,15 +14,15 @@ Core Features:
 • Accessibility & Localization: Fully bilingual, offering instant toggling between English and Arabic with complete Right-To-Left (RTL) UI support.
 
 Technical Architecture: Built using Electron.js and Node.js to bridge web technologies with native desktop capabilities. It implements a robust local caching system for API data to ensure the launcher functions seamlessly offline. The application also features a secure local backup and restore utility, managing user data via the native file system, and utilizes GitHub Actions for automated build and release pipelines.`,
-            image: '/nexus-launcher-1.png',
+            image: '/nexus-launcher-1.webp',
             images: [
-                '/nexus-launcher-1.png',
-                '/nexus-launcher-2.png',
-                '/nexus-launcher-3.png',
-                '/nexus-launcher-4.png',
-                '/nexus-launcher-5.png',
-                '/nexus-launcher-6.png',
-                '/nexus-launcher-7.png',
+                '/nexus-launcher-1.webp',
+                '/nexus-launcher-2.webp',
+                '/nexus-launcher-3.webp',
+                '/nexus-launcher-4.webp',
+                '/nexus-launcher-5.webp',
+                '/nexus-launcher-6.webp',
+                '/nexus-launcher-7.webp',
             ],
             technologies: ['Electron.js', 'Node.js', 'Chart.js', 'RAWG API', 'Steam API', 'GitHub Actions'],
             reason: 'I wanted a centralised hub for my game library with detailed playtime tracking and a beautiful UI.',
@@ -42,12 +42,12 @@ Core Features:
 • Developer-Focused UI: Features an OLED-optimized dark theme to reduce eye strain and an advanced sidebar for quick operating system switching.
 
 Technical Architecture: Engineered with Electron.js and Node.js, ensuring cross-platform compatibility. The application relies entirely on a localized JSON data structure, guaranteeing zero latency and 100% offline functionality. CI/CD pipelines are managed via GitHub Actions for automated multi-OS executable generation.`,
-            image: '/cmd-vault-1.png',
+            image: '/cmd-vault-1.webp',
             images: [
-                '/cmd-vault-1.png',
-                '/cmd-vault-2.png',
-                '/cmd-vault-3.png',
-                '/cmd-vault-4.png',
+                '/cmd-vault-1.webp',
+                '/cmd-vault-2.webp',
+                '/cmd-vault-3.webp',
+                '/cmd-vault-4.webp',
             ],
             technologies: ['Electron.js', 'Node.js', 'GitHub Actions', 'Font Awesome'],
             reason: 'I needed quick offline access to useful commands in both Arabic and English.',
@@ -66,8 +66,8 @@ Core Features:
 • Minimalist Design: Wrapped in a sleek, "Pitch Black" UI that prioritizes user experience with a simple one-click execution model.
 
 Technical Architecture: Developed natively for Windows using C# and the .NET 8 framework. The user interface is built with WPF (Windows Presentation Foundation) for hardware-accelerated rendering. The application leverages native Windows APIs and System.IO namespaces to execute administrative-level directory traversals and secure file deletions while protecting critical system processes.`,
-            image: '/temp-cleaner.png',
-            images: ['/temp-cleaner.png'],
+            image: '/temp-cleaner.webp',
+            images: ['/temp-cleaner.webp'],
             technologies: ['C#', '.NET 8', 'WPF'],
             reason: 'I wanted a one‑click tool to keep my system clean without manual effort.',
             githubLink: 'https://github.com/AliAl-ojeely/TempCleaner',
@@ -85,8 +85,8 @@ Core Features:
 • Responsive UI: Features active-turn indicators, hover effects on playable grids, and a custom dark theme that modernizes the classic Windows Forms look.
 
 Technical Architecture: Built using C# and Windows Forms. The project heavily emphasizes event-driven programming, custom UI control manipulation, and strict 2D array logic for grid validation. It serves as a practical demonstration of object-oriented UI design and state management within the .NET ecosystem.`,
-            image: '/tic-tac-toe-1.png',
-            images: ['/tic-tac-toe-1.png', '/tic-tac-toe-2.png'],
+            image: '/tic-tac-toe-1.webp',
+            images: ['/tic-tac-toe-1.webp', '/tic-tac-toe-2.webp'],
             technologies: ['C#', 'Windows Forms'],
             reason: 'I built this to strengthen my OOP skills and Windows Forms UI handling.',
             githubLink: 'https://github.com/AliAl-ojeely/tic-tac-toe-winforms',
@@ -104,7 +104,7 @@ Core Features:
 • Security & Auditing: Implements a Role-Based Access Control (RBAC) system separating standard users from administrators, coupled with an automated, tamper-proof activity logging system for all logins and transactions.
 
 Technical Architecture: Written purely in standard C++. The architecture heavily utilizes Encapsulation (securing sensitive balance data), Inheritance (deriving specific user types from base Person classes), Polymorphism (overriding interface behaviors), and Abstraction (hiding complex file I/O operations). Data persistence is managed via secure, flat-text file databases.`,
-            image: '/Bank System OOP (C++).png',
+            image: '/Bank System OOP (C++).webp',
             images: [],
             technologies: ['C++', 'OOP'],
             reason: 'I developed this to apply real‑world OOP concepts learned in university.',
@@ -123,7 +123,7 @@ Core Features:
 • Audit Logging: Tracks the exact timestamps for task creation and completion, maintaining a historical record of user productivity.
 
 Technical Architecture: Developed in C++ utilizing the "Active Record" architectural design pattern. In this system, the \`clsWork\` object encapsulates both the task data and the database access logic, allowing the object to save, update, or delete itself directly from the underlying text-file database. This demonstrates advanced structural planning and memory management.`,
-            image: '/To-Do List (C++).png',
+            image: '/To-Do List (C++).webp',
             images: [],
             technologies: ['C++', 'OOP', 'Active Record Pattern'],
             reason: 'I wanted to demonstrate mastery of C++ and advanced software architecture.',
@@ -142,7 +142,7 @@ Core Features:
 • Statistical Wrap-Up: Generates a detailed post-match summary screen calculating final win/loss ratios and crowning the ultimate champion.
 
 Technical Architecture: Built in C++, the project focuses on precise control flow, algorithmic Random Number Generation (RNG) for the AI opponent's logic, and direct manipulation of the Windows console buffer for color and sound outputs.`,
-            image: '/Rock Paper Scissors Game (C++).png',
+            image: '/Rock Paper Scissors Game (C++).webp',
             images: [],
             technologies: ['C++'],
             reason: 'A quick project to practise conditional logic, loops, and randomisation.',
@@ -161,7 +161,7 @@ Core Features:
 • Instant Grading: Provides immediate visual feedback per question, cleanly handling invalid inputs, and concludes with a comprehensive Pass/Fail performance report detailing accuracy percentages.
 
 Technical Architecture: Developed in C++, this application showcases mastery over complex nested loops, switch-case routing, mathematical algorithm generation, and robust input sanitization to prevent application crashes from unexpected user keystrokes.`,
-            image: '/Math Questions Game (C++).png',
+            image: '/Math Questions Game (C++).webp',
             images: [],
             technologies: ['C++'],
             reason: 'I built it to help younger students practise mental math in a fun, interactive way.',
@@ -180,7 +180,7 @@ Core Features:
 • Live Audit Trail: Deeply integrated with a real-time activity logging system that monitors user behavior, administrative actions, and overall platform health.
 
 Technical Architecture: Architected entirely in React.js, focusing heavily on responsive component design, complex state management, and secure asynchronous API routing. The frontend is designed to efficiently parse and render large arrays of user data and live log streams without suffering performance bottlenecks.`,
-            image: '/UST Admin Dashboard (React.js).png',
+            image: '/UST Admin Dashboard (React.js).webp',
             images: [],
             technologies: ['React.js', 'JavaScript', 'Real‑time'],
             reason: 'I developed it to efficiently manage the university community platform.',
