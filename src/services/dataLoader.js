@@ -5,8 +5,15 @@ export async function fetchPortfolioData() {
         {
             id: 1,
             title: 'Nexus Game Launcher',
-            description:
-                'A cross‑platform game library manager built with Electron.js. Features a static dashboard, local caching for Steam/RAWG/SteamGridDB APIs, integrated play‑session timer, statistics dashboard with charts (Chart.js), backup system, drag‑and‑drop reordering, auto game detector, and full keyboard shortcuts. Fully supports Arabic and English.',
+            description: `Overview: A comprehensive, cross-platform desktop application designed to unify fragmented PC game libraries into a single, highly customizable dashboard.
+
+Core Features: 
+• Advanced Library Management: Automatically detects installed games and allows for drag-and-drop reordering.
+• Rich Metadata Integration: Pulls high-quality covers, descriptions, and metadata directly from the RAWG, Steam, and SteamGridDB APIs.
+• Analytical Dashboard: Features an integrated playtime tracker that records session lengths, visualized through interactive, beautifully rendered Chart.js graphs.
+• Accessibility & Localization: Fully bilingual, offering instant toggling between English and Arabic with complete Right-To-Left (RTL) UI support.
+
+Technical Architecture: Built using Electron.js and Node.js to bridge web technologies with native desktop capabilities. It implements a robust local caching system for API data to ensure the launcher functions seamlessly offline. The application also features a secure local backup and restore utility, managing user data via the native file system, and utilizes GitHub Actions for automated build and release pipelines.`,
             image: '/nexus-launcher-1.png',
             images: [
                 '/nexus-launcher-1.png',
@@ -26,8 +33,15 @@ export async function fetchPortfolioData() {
         {
             id: 2,
             title: 'CMD Vault',
-            description:
-                'A cross‑platform command reference tool that works 100% offline. Displays 100+ terminal commands for Windows, Linux, and macOS with bilingual Arabic/English descriptions. Offers advanced sidebar navigation, favourites, copy‑to‑clipboard, and an OLED dark theme.',
+            description: `Overview: An offline-first, highly optimized desktop reference tool built for developers and system administrators who need instant access to terminal syntax without relying on web searches.
+
+Core Features:
+• Extensive Command Database: Houses a curated, searchable index of over 100 essential CLI commands spanning Windows (CMD/PowerShell), Linux, and macOS.
+• Rapid Workflow Tools: Includes instant "copy-to-clipboard" functionality, a favorites system for pinning frequently used commands, and lightning-fast search filtering.
+• Bilingual Support: Every command is documented with detailed explanations in both Arabic and English.
+• Developer-Focused UI: Features an OLED-optimized dark theme to reduce eye strain and an advanced sidebar for quick operating system switching.
+
+Technical Architecture: Engineered with Electron.js and Node.js, ensuring cross-platform compatibility. The application relies entirely on a localized JSON data structure, guaranteeing zero latency and 100% offline functionality. CI/CD pipelines are managed via GitHub Actions for automated multi-OS executable generation.`,
             image: '/cmd-vault-1.png',
             images: [
                 '/cmd-vault-1.png',
@@ -44,8 +58,14 @@ export async function fetchPortfolioData() {
         {
             id: 3,
             title: 'TempCleaner (C#)',
-            description:
-                'A lightweight WPF utility that cleans temporary files, Windows update cache, DNS cache, prefetch, and the recycle bin. Features a "Pitch Black" OLED‑style UI and displays freed disk space after each clean‑up.',
+            description: `Overview: A targeted, high-performance Windows system utility designed to safely reclaim storage space and optimize OS responsiveness by purging redundant cache files.
+
+Core Features:
+• Deep System Cleaning: Safely targets and flushes deep system directories including Windows Update leftovers, DNS cache, Prefetch data, local temporary files, and the Recycle Bin.
+• Real-Time Analytics: Dynamically calculates and displays the exact storage volume (in MB/GB) freed immediately after the clean-up execution.
+• Minimalist Design: Wrapped in a sleek, "Pitch Black" UI that prioritizes user experience with a simple one-click execution model.
+
+Technical Architecture: Developed natively for Windows using C# and the .NET 8 framework. The user interface is built with WPF (Windows Presentation Foundation) for hardware-accelerated rendering. The application leverages native Windows APIs and System.IO namespaces to execute administrative-level directory traversals and secure file deletions while protecting critical system processes.`,
             image: '/temp-cleaner.png',
             images: ['/temp-cleaner.png'],
             technologies: ['C#', '.NET 8', 'WPF'],
@@ -57,8 +77,14 @@ export async function fetchPortfolioData() {
         {
             id: 4,
             title: 'Tic‑Tac‑Toe',
-            description:
-                'A classic two‑player Tic‑Tac‑Toe desktop game with smart win/draw detection, score tracking, and a dark theme. Built to practice C# and Windows Forms event handling.',
+            description: `Overview: A modernized, desktop-native implementation of the classic Tic-Tac-Toe game, featuring an intelligent game loop and a polished graphical interface.
+
+Core Features:
+• Smart Game Engine: Instantly calculates win states across all rows, columns, and diagonals, while accurately detecting gridlock draws.
+• Session Tracking: Includes a persistent, on-screen scoreboard that tracks Player 1 and Player 2 victories across extended gameplay sessions.
+• Responsive UI: Features active-turn indicators, hover effects on playable grids, and a custom dark theme that modernizes the classic Windows Forms look.
+
+Technical Architecture: Built using C# and Windows Forms. The project heavily emphasizes event-driven programming, custom UI control manipulation, and strict 2D array logic for grid validation. It serves as a practical demonstration of object-oriented UI design and state management within the .NET ecosystem.`,
             image: '/tic-tac-toe-1.png',
             images: ['/tic-tac-toe-1.png', '/tic-tac-toe-2.png'],
             technologies: ['C#', 'Windows Forms'],
@@ -70,8 +96,14 @@ export async function fetchPortfolioData() {
         {
             id: 5,
             title: 'Bank System (OOP)',
-            description:
-                'A comprehensive console‑based banking system that demonstrates all four pillars of OOP: encapsulation, inheritance, polymorphism, and abstraction. It includes client management, transactions (deposit/withdraw/transfer), user permissions, and activity logging.',
+            description: `Overview: An enterprise-grade, console-based financial management system engineered from the ground up to rigorously demonstrate the four core pillars of Object-Oriented Programming.
+
+Core Features:
+• Comprehensive Account Management: Supports full client lifecycles, including account creation, modification, and deletion.
+• Financial Transactions: Handles secure deposits, withdrawals, and complex inter-account balance transfers.
+• Security & Auditing: Implements a Role-Based Access Control (RBAC) system separating standard users from administrators, coupled with an automated, tamper-proof activity logging system for all logins and transactions.
+
+Technical Architecture: Written purely in standard C++. The architecture heavily utilizes Encapsulation (securing sensitive balance data), Inheritance (deriving specific user types from base Person classes), Polymorphism (overriding interface behaviors), and Abstraction (hiding complex file I/O operations). Data persistence is managed via secure, flat-text file databases.`,
             image: '/Bank System OOP (C++).png',
             images: [],
             technologies: ['C++', 'OOP'],
@@ -83,9 +115,15 @@ export async function fetchPortfolioData() {
         {
             id: 6,
             title: 'To‑Do List (Active Record)',
-            description:
-                'A console task manager that implements the Active Record pattern. Each task (clsWork) loads and saves itself to a text file. Features full CRUD, dynamic table formatting, auto‑generated IDs, and an audit log.',
-            image: '/To-Do List (C++).png', 
+            description: `Overview: A highly structured, console-based task management application that transcends basic procedural programming by implementing professional software design patterns.
+
+Core Features:
+• Full CRUD Functionality: Users can seamlessly Create, Read, Update, and Delete tasks, with the system automatically handling unique ID generation.
+• Advanced Console UI: Features a dynamically drawn, ASCII-formatted table system that keeps task data perfectly aligned and readable in the terminal.
+• Audit Logging: Tracks the exact timestamps for task creation and completion, maintaining a historical record of user productivity.
+
+Technical Architecture: Developed in C++ utilizing the "Active Record" architectural design pattern. In this system, the \`clsWork\` object encapsulates both the task data and the database access logic, allowing the object to save, update, or delete itself directly from the underlying text-file database. This demonstrates advanced structural planning and memory management.`,
+            image: '/To-Do List (C++).png',
             images: [],
             technologies: ['C++', 'OOP', 'Active Record Pattern'],
             reason: 'I wanted to demonstrate mastery of C++ and advanced software architecture.',
@@ -96,8 +134,14 @@ export async function fetchPortfolioData() {
         {
             id: 7,
             title: 'Rock Paper Scissors Game',
-            description:
-                'A console game where you play Rock‑Paper‑Scissors against the computer. It supports up to 10 rounds per match, gives colour‑coded feedback, and tracks wins/losses/draws.',
+            description: `Overview: An interactive, algorithmic console game that pits the user against an unpredictable, computer-controlled opponent in customizable match lengths.
+
+Core Features:
+• Dynamic Matchmaking: Users can configure matches to last anywhere from a quick single round to a grueling 10-round championship.
+• Real-Time Feedback: The terminal outputs dynamic, color-coded text (e.g., green for a win, red for a loss) accompanied by native system sounds to elevate the standard console experience.
+• Statistical Wrap-Up: Generates a detailed post-match summary screen calculating final win/loss ratios and crowning the ultimate champion.
+
+Technical Architecture: Built in C++, the project focuses on precise control flow, algorithmic Random Number Generation (RNG) for the AI opponent's logic, and direct manipulation of the Windows console buffer for color and sound outputs.`,
             image: '/Rock Paper Scissors Game (C++).png',
             images: [],
             technologies: ['C++'],
@@ -109,8 +153,14 @@ export async function fetchPortfolioData() {
         {
             id: 8,
             title: 'Math Questions Game',
-            description:
-                'A console math quiz that generates random arithmetic problems with adjustable difficulty and operation type. It provides instant coloured feedback and a final pass/fail summary.',
+            description: `Overview: A highly customizable, educational training tool designed to procedurally generate arithmetic problems to test and improve the user's mental math speed.
+
+Core Features:
+• Procedural Generation: Dynamically creates unique math equations based on user-selected parameters, ensuring no two quizzes are exactly alike.
+• Scalable Difficulty: Offers multiple difficulty tiers (Easy, Medium, Hard, Mix) and allows the user to isolate specific operations (Addition, Subtraction, Multiplication, Division).
+• Instant Grading: Provides immediate visual feedback per question, cleanly handling invalid inputs, and concludes with a comprehensive Pass/Fail performance report detailing accuracy percentages.
+
+Technical Architecture: Developed in C++, this application showcases mastery over complex nested loops, switch-case routing, mathematical algorithm generation, and robust input sanitization to prevent application crashes from unexpected user keystrokes.`,
             image: '/Math Questions Game (C++).png',
             images: [],
             technologies: ['C++'],
@@ -122,8 +172,14 @@ export async function fetchPortfolioData() {
         {
             id: 9,
             title: 'UST Admin Dashboard',
-            description:
-                'A React.js admin panel built for the UST Community platform. It manages users, content moderation, and real‑time activity logs to keep the community safe.',
+            description: `Overview: A secure, high-performance web-based control panel engineered specifically for moderators of the UST Community platform to maintain platform integrity.
+
+Core Features:
+• Comprehensive User Management: Empowers administrators to assign roles, edit profile metadata, and enforce community guidelines via account suspension toggles.
+• Content Moderation Queue: Features a streamlined interface for reviewing, approving, or flagging user-generated posts before they hit the main platform.
+• Live Audit Trail: Deeply integrated with a real-time activity logging system that monitors user behavior, administrative actions, and overall platform health.
+
+Technical Architecture: Architected entirely in React.js, focusing heavily on responsive component design, complex state management, and secure asynchronous API routing. The frontend is designed to efficiently parse and render large arrays of user data and live log streams without suffering performance bottlenecks.`,
             image: '/UST Admin Dashboard (React.js).png',
             images: [],
             technologies: ['React.js', 'JavaScript', 'Real‑time'],

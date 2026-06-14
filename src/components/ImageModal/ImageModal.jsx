@@ -1,8 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './ImageModal.module.css';
 
-export default function ImageModal({ images, initialIndex = 0, onClose }) {
-    const [current, setCurrent] = useState(initialIndex);
+export default function ImageModal({ images = [], initialIndex = 0, onClose }) {
+    // All hooks must be called before any conditional return
+    const [current, setCurrent] = useState(() => {
+        if (initialIndex >= 0 && initialIndex < images.length) return initialIndex;
+        return 0;
+    });
     const [playing, setPlaying] = useState(false);
 
     const total = images.length;
@@ -15,7 +19,7 @@ export default function ImageModal({ images, initialIndex = 0, onClose }) {
         setCurrent((prev) => (prev - 1 + total) % total);
     }, [total]);
 
-    // Auto‑play every 3 seconds
+    // Auto‑play
     useEffect(() => {
         if (!playing || total <= 1) return;
         const timer = setInterval(goNext, 3000);
@@ -33,7 +37,18 @@ export default function ImageModal({ images, initialIndex = 0, onClose }) {
         return () => window.removeEventListener('keydown', handleKey);
     }, [goNext, goPrev, onClose]);
 
-    if (!images.length) return null;
+    // Preload adjacent images (optional)
+    useEffect(() => {
+        const preload = (src) => {
+            const img = new Image();
+            img.src = src;
+        };
+        if (images[current - 1]) preload(images[current - 1]);
+        if (images[current + 1]) preload(images[current + 1]);
+    }, [current, images]);
+
+    // NOW we can safely bail out if there are no images
+    if (!images || images.length === 0) return null;
 
     return (
         <div className={styles.overlay} onClick={onClose}>
@@ -41,14 +56,15 @@ export default function ImageModal({ images, initialIndex = 0, onClose }) {
                 {/* Close button */}
                 <button className={styles.close} onClick={onClose}>✕</button>
 
-                {/* Image */}
+                {/* Current image */}
                 <img
                     src={images[current]}
                     alt={`Screenshot ${current + 1}`}
                     className={styles.image}
+                    key={current} // force re‑mount on change
                 />
 
-                {/* Arrows */}
+                {/* Arrows – only if more than one image */}
                 {total > 1 && (
                     <>
                         <button className={styles.arrowLeft} onClick={goPrev}>‹</button>
@@ -58,12 +74,8 @@ export default function ImageModal({ images, initialIndex = 0, onClose }) {
 
                 {/* Controls bar */}
                 <div className={styles.controls}>
-                    {/* Play / Pause */}
                     {total > 1 && (
-                        <button
-                            className={styles.playBtn}
-                            onClick={() => setPlaying(!playing)}
-                        >
+                        <button className={styles.playBtn} onClick={() => setPlaying(!playing)}>
                             {playing ? '⏸' : '▶'}
                         </button>
                     )}

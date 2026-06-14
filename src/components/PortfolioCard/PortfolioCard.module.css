@@ -48,12 +48,6 @@
     margin-bottom: 1rem;
 }
 
-.fullDesc {
-    color: var(--color-text-muted);
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
 .reason {
     color: var(--color-text-muted);
     margin-bottom: 0.75rem;

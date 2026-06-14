@@ -50,6 +50,7 @@ export default function Home() {
     const toggleExpand = (id) => setExpandedId(expandedId === id ? null : id);
 
     const openModal = (images, index = 0) => {
+        console.log('Opening modal with images:', images, 'index:', index); // temporary debug
         setModalImages(images);
         setModalIndex(index);
         setModalOpen(true);
