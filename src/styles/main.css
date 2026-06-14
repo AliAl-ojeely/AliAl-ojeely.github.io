@@ -57,3 +57,45 @@ img {
         font-size: 14px;
     }
 }
+
+/* Apply transition to all interactive elements */
+a,
+button,
+.card,
+.profilePic,
+.btnPrimary,
+.btnSecondary,
+.techBadge,
+.galleryImg,
+.image,
+.hamburger span {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+}
+
+/* Subtle animated background for hero */
+@keyframes subtleShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    animation: subtleShift 8s ease infinite;
+}

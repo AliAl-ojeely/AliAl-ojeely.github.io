@@ -53,8 +53,11 @@ ALIAL-OJEELY/
 │   │   │   ├── PortfolioCard.jsx
 │   │   │   └── PortfolioCard.module.css
 │   │   └── ScrollToTop/
-│   │       ├── ScrollToTop.jsx
-│   │       └── ScrollToTop.module.css
+│   │   │   ├── ScrollToTop.jsx
+│   │   │   └── ScrollToTop.module.css
+│   │   └── ImageModal/
+│   │       ├── ImageModal.jsx
+│   │       └── ImageModal.module.css
 │   ├── models/
 │   │   ├── BaseModel.js
 │   │   └── PortfolioItem.js

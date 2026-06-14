@@ -2,16 +2,23 @@ import { useState, useEffect } from 'react';
 import PortfolioItem from '../../models/PortfolioItem';
 import { fetchPortfolioData } from '../../services/dataLoader';
 import PortfolioCard from '../../components/PortfolioCard/PortfolioCard';
+import ImageModal from '../../components/ImageModal/ImageModal';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import styles from './Home.module.css';
 
-// Profile photo from public folder
+// Paths to assets in the public folder
 const profilePhoto = '/profile.jpg';
+const cvFile = '/Ali_Al-Ojeely_CV.pdf'; // Change to your actual CV filename
 
 export default function Home() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [expandedId, setExpandedId] = useState(null);
+
+    // Slideshow modal state
+    const [modalImages, setModalImages] = useState([]);
+    const [modalIndex, setModalIndex] = useState(0);
+    const [modalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         async function load() {
@@ -27,9 +34,19 @@ export default function Home() {
         setExpandedId(expandedId === id ? null : id);
     };
 
+    const openModal = (images, index = 0) => {
+        setModalImages(images);
+        setModalIndex(index);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
     return (
         <>
-            {/* HERO */}
+            {/* HERO SECTION */}
             <section id="home" className={styles.hero}>
                 <div className={styles.heroRow}>
                     <img
@@ -61,12 +78,23 @@ export default function Home() {
                             >
                                 GitHub
                             </a>
+                            <a
+                                href="https://www.linkedin.com/in/ali-nasser-al-ojeely-27b86b372/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.btnSecondary}
+                            >
+                                LinkedIn
+                            </a>
+                            <a href={cvFile} download className={styles.btnSecondary}>
+                                Download CV
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* ABOUT */}
+            {/* ABOUT SECTION */}
             <section id="about" className={styles.about}>
                 <h2>About Me</h2>
                 <p className={styles.summary}>
@@ -105,7 +133,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* PROJECTS */}
+            {/* PROJECTS SECTION */}
             <section id="projects" className={styles.projects}>
                 <h2>My Projects</h2>
                 {loading ? (
@@ -118,13 +146,14 @@ export default function Home() {
                                 item={item}
                                 isExpanded={expandedId === item.id}
                                 onToggle={() => toggleExpand(item.id)}
+                                onImageClick={openModal}
                             />
                         ))}
                     </div>
                 )}
             </section>
 
-            {/* FOOTER */}
+            {/* FOOTER SECTION */}
             <footer className={styles.footer}>
                 <div className={styles.techIcons}>
                     <i className="devicon-javascript-plain colored" title="JavaScript"></i>
@@ -144,6 +173,15 @@ export default function Home() {
             </footer>
 
             <ScrollToTop />
+
+            {/* SLIDESHOW MODAL */}
+            {modalOpen && (
+                <ImageModal
+                    images={modalImages}
+                    initialIndex={modalIndex}
+                    onClose={closeModal}
+                />
+            )}
         </>
     );
 }

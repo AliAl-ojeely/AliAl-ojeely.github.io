@@ -72,7 +72,7 @@ export async function fetchPortfolioData() {
             title: 'Bank System (OOP)',
             description:
                 'A comprehensive console‑based banking system that demonstrates all four pillars of OOP: encapsulation, inheritance, polymorphism, and abstraction. It includes client management, transactions (deposit/withdraw/transfer), user permissions, and activity logging.',
-            image: null,
+            image: '/Bank System OOP (C++).png',
             images: [],
             technologies: ['C++', 'OOP'],
             reason: 'I developed this to apply real‑world OOP concepts learned in university.',
@@ -85,7 +85,7 @@ export async function fetchPortfolioData() {
             title: 'To‑Do List (Active Record)',
             description:
                 'A console task manager that implements the Active Record pattern. Each task (clsWork) loads and saves itself to a text file. Features full CRUD, dynamic table formatting, auto‑generated IDs, and an audit log.',
-            image: null,
+            image: '/To-Do List (C++).png', 
             images: [],
             technologies: ['C++', 'OOP', 'Active Record Pattern'],
             reason: 'I wanted to demonstrate mastery of C++ and advanced software architecture.',
@@ -98,7 +98,7 @@ export async function fetchPortfolioData() {
             title: 'Rock Paper Scissors Game',
             description:
                 'A console game where you play Rock‑Paper‑Scissors against the computer. It supports up to 10 rounds per match, gives colour‑coded feedback, and tracks wins/losses/draws.',
-            image: null,
+            image: '/Rock Paper Scissors Game (C++).png',
             images: [],
             technologies: ['C++'],
             reason: 'A quick project to practise conditional logic, loops, and randomisation.',
@@ -111,7 +111,7 @@ export async function fetchPortfolioData() {
             title: 'Math Questions Game',
             description:
                 'A console math quiz that generates random arithmetic problems with adjustable difficulty and operation type. It provides instant coloured feedback and a final pass/fail summary.',
-            image: null,
+            image: '/Math Questions Game (C++).png',
             images: [],
             technologies: ['C++'],
             reason: 'I built it to help younger students practise mental math in a fun, interactive way.',
@@ -124,7 +124,7 @@ export async function fetchPortfolioData() {
             title: 'UST Admin Dashboard',
             description:
                 'A React.js admin panel built for the UST Community platform. It manages users, content moderation, and real‑time activity logs to keep the community safe.',
-            image: null,
+            image: '/UST Admin Dashboard (React.js).png',
             images: [],
             technologies: ['React.js', 'JavaScript', 'Real‑time'],
             reason: 'I developed it to efficiently manage the university community platform.',
