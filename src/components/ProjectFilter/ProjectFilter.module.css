@@ -1,0 +1,82 @@
+.filterBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    border: 1px solid #333;
+    background: var(--color-surface);
+    color: white;
+    font-size: 0.95rem;
+    min-width: 220px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.input::placeholder {
+    color: #777;
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.filterBtn,
+.clearBtn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+    color: white;
+    letter-spacing: 0.3px;
+}
+
+.filterBtn {
+    background: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.filterBtn:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.5);
+}
+
+.clearBtn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #ccc;
+}
+
+.clearBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #666;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .filterBar {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .input {
+        min-width: 100%;
+    }
+
+    .filterBtn,
+    .clearBtn {
+        width: 100%;
+    }
+}

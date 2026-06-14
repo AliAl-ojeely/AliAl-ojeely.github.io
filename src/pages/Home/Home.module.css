@@ -337,3 +337,41 @@
         padding: 3rem 1rem;
     }
 }
+
+.cursor {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 300;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.initialAnim {
+    animation: float 3s ease-in-out infinite;
+    pointer-events: none;
+    /* disable hover while animating */
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

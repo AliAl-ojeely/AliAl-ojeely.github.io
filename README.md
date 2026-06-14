@@ -46,31 +46,36 @@ ALIAL-OJEELY/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   ├── ImageModal/
+│   │   │   ├── ImageModal.jsx
+│   │   │   └── ImageModal.module.css
 │   │   ├── Navbar/
 │   │   │   ├── Navbar.jsx
 │   │   │   └── Navbar.module.css
-│   │   └── PortfolioCard/
+│   │   ├── PortfolioCard/
 │   │   │   ├── PortfolioCard.jsx
 │   │   │   └── PortfolioCard.module.css
+│   │   ├── Preloader/
+│   │   │   ├── Preloader.jsx
+│   │   │   └── Preloader.module.css
+│   │   ├── ProjectFilter/
+│   │   │   ├── ProjectFilter.jsx
+│   │   │   └── ProjectFilter.module.css
+│   │   ├── RevealOnScroll/
+│   │   │   ├── RevealOnScroll.jsx
+│   │   │   └── RevealOnScroll.module.css
 │   │   └── ScrollToTop/
-│   │   │   ├── ScrollToTop.jsx
-│   │   │   └── ScrollToTop.module.css
-│   │   └── ImageModal/
-│   │       ├── ImageModal.jsx
-│   │       └── ImageModal.module.css
+│   │       ├── ScrollToTop.jsx
+│   │       └── ScrollToTop.module.css
+│   ├── hooks/
+│   │   └── useTypingRotate.js
 │   ├── models/
 │   │   ├── BaseModel.js
 │   │   └── PortfolioItem.js
 │   ├── pages/
-│   │   ├── Home/
-│   │   │   ├── Home.jsx
-│   │   │   └── Home.module.css
-│   │   ├── About/
-│   │   │   ├── About.jsx
-│   │   │   └── About.module.css
-│   │   └── Projects/
-│   │       ├── Projects.jsx
-│   │       └── Projects.module.css
+│   │   └── Home/
+│   │       ├── Home.jsx
+│   │       └── Home.module.css
 │   ├── services/
 │   │   └── dataLoader.js
 │   ├── styles/
@@ -81,7 +86,8 @@ ALIAL-OJEELY/
 │   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
-│   └── main.jsx
+│   ├── main.jsx
+│   └── Root.jsx
 ├── .gitignore
 ├── index.html
 ├── package.json
