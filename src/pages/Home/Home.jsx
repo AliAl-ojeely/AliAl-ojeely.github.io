@@ -135,26 +135,52 @@ export default function Home() {
                         <div className={styles.card}>
                             <h3>Core Competencies</h3>
                             <ul>
-                                <li><strong>Frontend &amp; UI:</strong> HTML5/CSS3, JavaScript, React.js, UI/UX Design</li>
-                                <li><strong>Desktop &amp; Systems:</strong> C#, C++, Electron.js, Node.js</li>
-                                <li><strong>Tools &amp; Architecture:</strong> Git/GitHub, Data Structure &amp; OOP, Inno Setup</li>
+                                <li>
+                                    <strong>Frontend &amp; UI:</strong>
+                                    <ul>
+                                        <li>HTML5/CSS3,
+                                            JavaScript,
+                                            React.js
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Desktop &amp; Systems:</strong>
+                                    <ul>
+                                        <li>C#,
+                                            C++,
+                                            Electron.js,
+                                            Node.js
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Tools &amp; Architecture:</strong>
+                                    <ul>
+                                        <li>Git/GitHub,
+                                            GitHub Actions (CI/CD),
+                                            Data Structures &amp; OOP,
+                                            Inno Setup
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <div className={styles.card}>
                             <h3>Education</h3>
                             <ul>
                                 <li>B.Sc. IT – University of Science and Technology (2025)</li>
-                                <li>Software Engineering Success – DevZone (2025)</li>
+                                {/* <li>Software Engineering Success – DevZone (2025)</li>
                                 <li>DevOps Training – DevZone (2025)</li>
                                 <li>Front‑End Development – UST (2022)</li>
-                                <li>ICDL – UST (2021)</li>
+                                <li>ICDL – UST (2021)</li> */}
                             </ul>
                         </div>
                         <div className={styles.card}>
                             <h3>Languages</h3>
                             <ul>
                                 <li>Arabic (Native)</li>
-                                <li>English (B2)</li>
+                                <li>English (Intermediate/B1)</li>
                             </ul>
                         </div>
                     </div>

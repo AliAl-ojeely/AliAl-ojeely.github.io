@@ -46,6 +46,9 @@ ALIAL-OJEELY/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   ├── CertificateCard/
+│   │   │   ├── CertificateCard.jsx
+│   │   │   └── CertificateCard.module.css
 │   │   ├── ImageModal/
 │   │   │   ├── ImageModal.jsx
 │   │   │   └── ImageModal.module.css
@@ -71,12 +74,14 @@ ALIAL-OJEELY/
 │   │   └── useTypingRotate.js
 │   ├── models/
 │   │   ├── BaseModel.js
+│   │   ├── Certificate.js
 │   │   └── PortfolioItem.js
 │   ├── pages/
 │   │   └── Home/
 │   │       ├── Home.jsx
 │   │       └── Home.module.css
 │   ├── services/
+│   │   ├── certificateLoader.js
 │   │   └── dataLoader.js
 │   ├── styles/
 │   │   ├── main.css
