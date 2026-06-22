@@ -7,6 +7,9 @@ import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
 import RevealOnScroll from '../../components/RevealOnScroll/RevealOnScroll';
 import useTypingRotate from '../../hooks/useTypingRotate';
+import Certificate from '../../models/Certificate';
+import { fetchCertificates } from '../../services/certificateLoader';
+import CertificateCard from '../../components/CertificateCard/CertificateCard';
 import styles from './Home.module.css';
 
 const profilePhoto = '/profile.webp';
@@ -20,7 +23,7 @@ export default function Home() {
     const [modalIndex, setModalIndex] = useState(0);
     const [modalOpen, setModalOpen] = useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
-
+    
     const typingWords = [
         'Software Developer',
         'Frontend Engineer',
@@ -30,6 +33,7 @@ export default function Home() {
 
     const typedText = useTypingRotate(typingWords, 80, 50, 1800);
     const [initialAnim, setInitialAnim] = useState(true);
+    const [certificates, setCertificates] = useState([]);
 
     useEffect(() => {
         // Data loading
@@ -37,6 +41,9 @@ export default function Home() {
             const data = await fetchPortfolioData();
             await PortfolioItem.loadFromSource(data);
             const allItems = PortfolioItem.findAll();
+            const certData = await fetchCertificates();
+            await Certificate.loadFromSource(certData);
+            setCertificates(Certificate.findAll());
             setItems(allItems);
             setFilteredItems(allItems);
             setLoading(false);
@@ -150,6 +157,18 @@ export default function Home() {
                                 <li>English (B2)</li>
                             </ul>
                         </div>
+                    </div>
+                </section>
+            </RevealOnScroll>
+
+            {/* CERTIFICATES */}
+            <RevealOnScroll direction="right">
+                <section id="certificates" className={styles.certificates}>
+                    <h2>Certificates</h2>
+                    <div className={styles.certificateGrid}>
+                        {certificates.map(cert => (
+                            <CertificateCard key={cert.id} certificate={cert} />
+                        ))}
                     </div>
                 </section>
             </RevealOnScroll>

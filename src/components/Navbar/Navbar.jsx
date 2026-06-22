@@ -4,9 +4,26 @@ import styles from './Navbar.module.css';
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 10);
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+
+            const sections = ['home', 'about', 'certificates', 'projects'];
+            let current = 'home';
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        current = id;
+                        break;
+                    }
+                }
+            }
+            setActiveSection(current);
+        };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -34,9 +51,18 @@ export default function Navbar() {
             </button>
 
             <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
-                <button onClick={() => scrollTo('home')}>Home</button>
-                <button onClick={() => scrollTo('about')}>About</button>
-                <button onClick={() => scrollTo('projects')}>Projects</button>
+                <button onClick={() => scrollTo('home')} className={activeSection === 'home' ? styles.active : ''}>
+                    Home
+                </button>
+                <button onClick={() => scrollTo('about')} className={activeSection === 'about' ? styles.active : ''}>
+                    About
+                </button>
+                <button onClick={() => scrollTo('certificates')} className={activeSection === 'certificates' ? styles.active : ''}>
+                    Certificates
+                </button>
+                <button onClick={() => scrollTo('projects')} className={activeSection === 'projects' ? styles.active : ''}>
+                    Projects
+                </button>
             </nav>
         </header>
     );
