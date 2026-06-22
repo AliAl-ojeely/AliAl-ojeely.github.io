@@ -48,6 +48,14 @@
     margin-bottom: 1rem;
 }
 
+.fullDesc {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-bottom: 0.5rem;
+}
+
 .reason {
     color: var(--color-text-muted);
     margin-bottom: 0.75rem;

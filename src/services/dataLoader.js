@@ -186,5 +186,26 @@ Technical Architecture: Architected entirely in React.js, focusing heavily on re
             reason: 'I developed it to efficiently manage the university community platform.',
             githubLink: 'https://github.com/AliAl-ojeely/ust-admin-dashboard',
         },
+
+        // ---- 10. Windows Defender Blocker ----
+    {
+      id: 10,
+      title: 'Windows Defender Blocker',
+      description: `Overview: A lightweight Windows Forms application that gives users one‑click control over Windows Defender, using official Group Policy registry keys for safe, reversible changes.
+
+Core Features:
+• Disable Defender: Turns off Real‑Time Protection, Cloud‑delivered Protection, Automatic Sample Submission, and Tamper Protection (with a prompt guiding the user to manually disable Tamper Protection first).
+• Enable Defender: Restores all settings to their default state instantly.
+• Multi‑Language Support: Switch between English, Arabic, Russian, and French at runtime.
+• Self‑Elevation: Automatically requests administrator privileges when launched.
+• Direct Access: Opens the Windows Security Virus & Threat Protection settings page directly from the app.
+
+Technical Architecture: Built with C# and .NET Framework 4.8 / Windows Forms. It modifies Group Policy registry keys (under HKLM\\Software\\Policies\\Microsoft\\Windows Defender) – the same method used by enterprise administrators – without deleting files or altering services. The UI follows KISS (Keep It Simple, Stupid) principles for a clean, straightforward experience.`,
+      image: '/Windows Defender Blocker.webp',
+      images: ['/Windows Defender Blocker.webp'],
+      technologies: ['C#', '.NET Framework', 'Windows Forms'],
+      reason: 'I wanted a simple, reversible tool to control Windows Defender without breaking the system.',
+      githubLink: 'https://github.com/AliAl-ojeely/WindowsDefenderBlocker',
+    },
     ];
 }
