@@ -205,7 +205,7 @@ Technical Architecture: Built with C# and .NET Framework 4.8 / Windows Forms. It
       images: ['/Windows Defender Blocker.webp'],
       technologies: ['C#', '.NET Framework', 'Windows Forms'],
       reason: 'I wanted a simple, reversible tool to control Windows Defender without breaking the system.',
-      githubLink: 'https://github.com/AliAl-ojeely/WindowsDefenderBlocker',
+        githubLink: 'https://github.com/AliAl-ojeely/Windows-Defender-Blocker',
     },
     ];
 }
