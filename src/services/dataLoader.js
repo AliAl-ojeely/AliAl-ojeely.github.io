@@ -207,5 +207,27 @@ Technical Architecture: Built with C# and .NET Framework 4.8 / Windows Forms. It
       reason: 'I wanted a simple, reversible tool to control Windows Defender without breaking the system.',
         githubLink: 'https://github.com/AliAl-ojeely/Windows-Defender-Blocker',
     },
+        // ---- 11. Click2Key ----
+        {
+            id: 11,
+            title: 'Click2Key',
+            description: `Overview: A modern WPF desktop application that puts over 100 Windows keyboard shortcuts at your fingertips. Instead of memorizing complex key combinations, users can execute any shortcut with a single mouse click – optionally adding a countdown delay like the Windows Snipping Tool.
+
+Core Features:
+• 105+ Shortcuts: Covers file management (Ctrl+C, Ctrl+V), system tools (Win+E, Win+I), navigation, virtual desktops, gaming (Win+G, Win+Alt+R), and accessibility (Win+U, Win+Ctrl+O).
+• Delay Timer: Choose 0–5 seconds of delay before the shortcut fires, giving you time to focus the target window.
+• Bilingual UI: Full English and Arabic support – every button, tooltip, and context menu item is translated. Arabic text renders beautifully with the Cairo font.
+• System Tray Integration: Minimize the app to the notification area; restore it with a double‑click. A right‑click context menu lets you Open, Toggle the tray icon, or Exit.
+• Light/Dark Themes: Smooth gradient backgrounds with dynamic text and separator colors that switch instantly.
+• Click Analytics: Tracks how many times each shortcut has been used, saved locally.
+• Professional Installer: Built with Inno Setup – installs with a desktop shortcut and uninstaller.
+
+Technical Architecture: Initially built with C# .NET Framework 4.8 / Windows Forms using custom UserControls inside a FlowLayoutPanel. Performance bottlenecks from hundreds of controls led to a complete architectural rewrite. The rendering engine now uses a single WPF UserControl (hosted in a WinForms ElementHost) with virtualized painting, cached resources, and a custom-themed ComboBox for the delay timer. Shortcut simulation uses the Win32 API (keybd_event). The solution also includes a CI/CD pipeline via GitHub Actions that compiles and packages the application.`,
+            image: '/WPF-Main-App-Photo.webp',
+            images: ['/WPF-Main-App-Photo.webp', '/main-app-photo.webp'],
+            technologies: ['C#', '.NET Framework 4.8', 'WPF', 'Windows Forms', 'Win32 API', 'Inno Setup', 'GitHub Actions'],
+            reason: 'I wanted to make Windows keyboard shortcuts accessible to everyone – especially users who struggle to remember complex key combinations or who need a simple, visual way to execute them.',
+            githubLink: 'https://github.com/AliAl-ojeely/Click2Key',
+        },
     ];
 }
