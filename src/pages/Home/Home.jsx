@@ -50,7 +50,7 @@ export default function Home() {
         }
         load();
 
-        const timer = setTimeout(() => setInitialAnim(false), 30000);
+        const timer = setTimeout(() => setInitialAnim(false), 90000);
         return () => clearTimeout(timer);
     }, []);
 
