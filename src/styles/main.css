@@ -100,3 +100,19 @@ body::before {
     z-index: -1;
     animation: subtleShift 8s ease infinite;
 }
+
+[dir="rtl"] .heroText {
+    text-align: right;
+}
+
+[dir="rtl"] .aboutGrid,
+[dir="rtl"] .projectGrid,
+[dir="rtl"] .certificateGrid {
+    direction: rtl;
+}
+
+/* Navbar RTL spacing */
+[dir="rtl"] .nav {
+    gap: 2rem;
+    /* adjust if needed */
+}

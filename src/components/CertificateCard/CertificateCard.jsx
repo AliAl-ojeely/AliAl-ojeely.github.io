@@ -1,6 +1,8 @@
 import styles from './CertificateCard.module.css';
+import { useLanguage } from '../../hooks/useLanguage';
 
 export default function CertificateCard({ certificate }) {
+    const { t } = useLanguage();
     const {
         title,
         description,
@@ -32,7 +34,7 @@ export default function CertificateCard({ certificate }) {
                         rel="noopener noreferrer"
                         className={styles.pdfLink}
                     >
-                        View Certificate ↗
+                        {t('viewCertificate')}
                     </a>
                 )}
             </div>

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { filterByTechnology, searchItems } from '../../utils/searchHelpers';
+import { useLanguage } from '../../hooks/useLanguage';
 import styles from './ProjectFilter.module.css';
 
 export default function ProjectFilter({ items, onFilter }) {
+    const { t } = useLanguage();
     const [query, setQuery] = useState('');
     const [tech, setTech] = useState('');
 
@@ -26,16 +28,14 @@ export default function ProjectFilter({ items, onFilter }) {
     };
 
     const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
-            applyFilter();
-        }
+        if (e.key === 'Enter') applyFilter();
     };
 
     return (
         <div className={styles.filterBar}>
             <input
                 type="text"
-                placeholder="Search by name..."
+                placeholder={t('filterPlaceholderName')}
                 name="query"
                 value={query}
                 onChange={handleChange}
@@ -44,7 +44,7 @@ export default function ProjectFilter({ items, onFilter }) {
             />
             <input
                 type="text"
-                placeholder="Filter by technology (e.g. React, C#)"
+                placeholder={t('filterPlaceholderTech')}
                 name="tech"
                 value={tech}
                 onChange={handleChange}
@@ -52,10 +52,10 @@ export default function ProjectFilter({ items, onFilter }) {
                 className={styles.input}
             />
             <button onClick={applyFilter} className={styles.filterBtn}>
-                Apply
+                {t('apply')}
             </button>
             <button onClick={clearFilter} className={styles.clearBtn}>
-                Clear
+                {t('clear')}
             </button>
         </div>
     );

@@ -1,15 +1,15 @@
 import styles from './PortfolioCard.module.css';
+import { useLanguage } from '../../hooks/useLanguage';
 
 export default function PortfolioCard({ item, isExpanded, onToggle, onImageClick }) {
+    const { t } = useLanguage();
     const hasImages = item.images && item.images.length > 0;
 
-    // When main image is clicked, open modal with all images
     const handleMainImageClick = (e) => {
         e.stopPropagation();
         if (hasImages) {
             onImageClick && onImageClick(item.images, 0);
         } else {
-            // If only one image (the main one), still open modal
             if (item.image) {
                 onImageClick && onImageClick([item.image], 0);
             }
@@ -45,7 +45,7 @@ export default function PortfolioCard({ item, isExpanded, onToggle, onImageClick
                         <p className={styles.fullDesc}>{item.description}</p>
                         {item.reason && (
                             <p className={styles.reason}>
-                                <strong>Why I built it:</strong> {item.reason}
+                                <strong>{t('whyBuilt')}:</strong> {item.reason}
                             </p>
                         )}
                         {item.githubLink && (
@@ -56,7 +56,7 @@ export default function PortfolioCard({ item, isExpanded, onToggle, onImageClick
                                 className={styles.githubBtn}
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                View on GitHub
+                                {t('viewOnGitHub')}
                             </a>
                         )}
                     </div>
@@ -88,7 +88,7 @@ export default function PortfolioCard({ item, isExpanded, onToggle, onImageClick
             </div>
 
             <div className={styles.expandHint}>
-                {isExpanded ? '▲ Click to collapse' : '▼ Click to expand'}
+                {isExpanded ? t('collapseHint') : t('expandHint')}
             </div>
         </article>
     );

@@ -70,7 +70,11 @@ ALIAL-OJEELY/
 │   │   └── ScrollToTop/
 │   │       ├── ScrollToTop.jsx
 │   │       └── ScrollToTop.module.css
+│   ├── context/
+│   │   ├── LanguageContext.jsx
+│   │   └── LanguageProvider.jsx
 │   ├── hooks/
+│   │   ├── useLanguage.js
 │   │   └── useTypingRotate.js
 │   ├── models/
 │   │   ├── BaseModel.js
@@ -92,7 +96,8 @@ ALIAL-OJEELY/
 │   ├── App.jsx
 │   ├── index.css
 │   ├── main.jsx
-│   └── Root.jsx
+│   ├── Root.jsx
+│   └── translations.js
 ├── .gitignore
 ├── index.html
 ├── package.json
