@@ -229,5 +229,31 @@ Technical Architecture: Initially built with C# .NET Framework 4.8 / Windows For
             reason: 'I wanted to make Windows keyboard shortcuts accessible to everyone – especially users who struggle to remember complex key combinations or who need a simple, visual way to execute them.',
             githubLink: 'https://github.com/AliAl-ojeely/Click2Key',
         },
+
+        // ---- 12. Folder Notifier ----
+        {
+            id: 12,
+            title: 'Folder Notifier',
+            description: `Overview: A lightweight Windows desktop application built with WPF (.NET 8) that lets you attach notes to any folder on your computer. Whenever that folder is opened through Windows File Explorer, the application automatically displays the linked note as a floating popup without modifying any of your files.
+
+Core Features:
+• Folder-based Notes: Attach notes to any folder; they pop up immediately when the folder is opened.
+• Smart Background Monitoring: Runs silently in the Windows System Tray with efficient Explorer detection and minimal CPU usage.
+• Bilingual & RTL/LTR UI: Full English and Arabic support, automatically switching layout based on the selected language.
+• Modern Custom Window: Floating notes use a modern, draggable popup that remembers its last screen location and can be pinned to stay always on top.
+• Privacy First & Offline: No telemetry, no analytics, and no cloud synchronization. Everything is stored locally.
+
+Technical Architecture: Built using C# and WPF on the .NET 8 framework. The application uses Entity Framework Core with SQLite to manage local database storage seamlessly inside the user's AppData folder. It relies on the Windows Shell API for efficient real-time detection of opened folders and utilizes Hardcodet.NotifyIcon.Wpf for robust System Tray integration.`,
+            image: '/foldernotifir-main-page-en.webp',
+            images: [
+                '/foldernotifir-main-page-en.webp',
+                '/foldernotifir-main-page-ar.webp',
+                '/foldernotifir-message-note-en.webp',
+                '/foldernotifir-message-note-ar.webp'
+            ],
+            technologies: ['C#', '.NET 8', 'WPF', 'SQLite', 'Entity Framework Core', 'Windows Shell API'],
+            reason: 'I wanted a simple, privacy-focused way to attach context, reminders, or tasks to specific directories on my computer without altering the actual files. This ensures the notes are exactly where I need them, the moment I open a folder.',
+            githubLink: 'https://github.com/AliAl-ojeely/Folder-Notifier',
+        },
     ];
 }
