@@ -1,11 +1,11 @@
 // src/services/dataLoader.js
 export async function fetchPortfolioData() {
     return [
-        // ---- 1. Nexus Game Launcher ----
-        {
-            id: 1,
-            title: 'Nexus Game Launcher',
-            description: `Overview: A comprehensive, cross-platform desktop application designed to unify fragmented PC game libraries into a single, highly customizable dashboard.
+      // ---- 1. Nexus Game Launcher ----
+      {
+        id: 1,
+        title: "Nexus Game Launcher",
+        description: `Overview: A comprehensive, cross-platform desktop application designed to unify fragmented PC game libraries into a single, highly customizable dashboard.
 
 Core Features: 
 • Advanced Library Management: Automatically detects installed games and allows for drag-and-drop reordering.
@@ -14,26 +14,34 @@ Core Features:
 • Accessibility & Localization: Fully bilingual, offering instant toggling between English and Arabic with complete Right-To-Left (RTL) UI support.
 
 Technical Architecture: Built using Electron.js and Node.js to bridge web technologies with native desktop capabilities. It implements a robust local caching system for API data to ensure the launcher functions seamlessly offline. The application also features a secure local backup and restore utility, managing user data via the native file system, and utilizes GitHub Actions for automated build and release pipelines.`,
-            image: '/nexus-launcher-1.webp',
-            images: [
-                '/nexus-launcher-1.webp',
-                '/nexus-launcher-2.webp',
-                '/nexus-launcher-3.webp',
-                '/nexus-launcher-4.webp',
-                '/nexus-launcher-5.webp',
-                '/nexus-launcher-6.webp',
-                '/nexus-launcher-7.webp',
-            ],
-            technologies: ['Electron.js', 'Node.js', 'Chart.js', 'RAWG API', 'Steam API', 'GitHub Actions'],
-            reason: 'I wanted a centralised hub for my game library with detailed playtime tracking and a beautiful UI.',
-            githubLink: 'https://github.com/AliAl-ojeely/nexus-game-launcher',
-        },
+        image: "/nexus-launcher-1.webp",
+        images: [
+          "/nexus-launcher-1.webp",
+          "/nexus-launcher-2.webp",
+          "/nexus-launcher-3.webp",
+          "/nexus-launcher-4.webp",
+          "/nexus-launcher-5.webp",
+          "/nexus-launcher-6.webp",
+          "/nexus-launcher-7.webp",
+        ],
+        technologies: [
+          "Electron.js",
+          "Node.js",
+          "Chart.js",
+          "RAWG API",
+          "Steam API",
+          "GitHub Actions",
+        ],
+        reason:
+          "I wanted a centralised hub for my game library with detailed playtime tracking and a beautiful UI.",
+        githubLink: "https://github.com/AliAl-ojeely/nexus-game-launcher",
+      },
 
-        // ---- 2. CMD Vault ----
-        {
-            id: 2,
-            title: 'CMD Vault',
-            description: `Overview: An offline-first, highly optimized desktop reference tool built for developers and system administrators who need instant access to terminal syntax without relying on web searches.
+      // ---- 2. CMD Vault ----
+      {
+        id: 2,
+        title: "CMD Vault",
+        description: `Overview: An offline-first, highly optimized desktop reference tool built for developers and system administrators who need instant access to terminal syntax without relying on web searches.
 
 Core Features:
 • Extensive Command Database: Houses a curated, searchable index of over 100 essential CLI commands spanning Windows (CMD/PowerShell), Linux, and macOS.
@@ -42,23 +50,29 @@ Core Features:
 • Developer-Focused UI: Features an OLED-optimized dark theme to reduce eye strain and an advanced sidebar for quick operating system switching.
 
 Technical Architecture: Engineered with Electron.js and Node.js, ensuring cross-platform compatibility. The application relies entirely on a localized JSON data structure, guaranteeing zero latency and 100% offline functionality. CI/CD pipelines are managed via GitHub Actions for automated multi-OS executable generation.`,
-            image: '/cmd-vault-1.webp',
-            images: [
-                '/cmd-vault-1.webp',
-                '/cmd-vault-2.webp',
-                '/cmd-vault-3.webp',
-                '/cmd-vault-4.webp',
-            ],
-            technologies: ['Electron.js', 'Node.js', 'GitHub Actions', 'Font Awesome'],
-            reason: 'I needed quick offline access to useful commands in both Arabic and English.',
-            githubLink: 'https://github.com/AliAl-ojeely/cmd-vault',
-        },
+        image: "/cmd-vault-1.webp",
+        images: [
+          "/cmd-vault-1.webp",
+          "/cmd-vault-2.webp",
+          "/cmd-vault-3.webp",
+          "/cmd-vault-4.webp",
+        ],
+        technologies: [
+          "Electron.js",
+          "Node.js",
+          "GitHub Actions",
+          "Font Awesome",
+        ],
+        reason:
+          "I needed quick offline access to useful commands in both Arabic and English.",
+        githubLink: "https://github.com/AliAl-ojeely/cmd-vault",
+      },
 
-        // ---- 3. TempCleaner ----
-        {
-            id: 3,
-            title: 'TempCleaner (C#)',
-            description: `Overview: A targeted, high-performance Windows system utility designed to safely reclaim storage space and optimize OS responsiveness by purging redundant cache files.
+      // ---- 3. TempCleaner ----
+      {
+        id: 3,
+        title: "TempCleaner (C#)",
+        description: `Overview: A targeted, high-performance Windows system utility designed to safely reclaim storage space and optimize OS responsiveness by purging redundant cache files.
 
 Core Features:
 • Deep System Cleaning: Safely targets and flushes deep system directories including Windows Update leftovers, DNS cache, Prefetch data, local temporary files, and the Recycle Bin.
@@ -66,18 +80,19 @@ Core Features:
 • Minimalist Design: Wrapped in a sleek, "Pitch Black" UI that prioritizes user experience with a simple one-click execution model.
 
 Technical Architecture: Developed natively for Windows using C# and the .NET 8 framework. The user interface is built with WPF (Windows Presentation Foundation) for hardware-accelerated rendering. The application leverages native Windows APIs and System.IO namespaces to execute administrative-level directory traversals and secure file deletions while protecting critical system processes.`,
-            image: '/temp-cleaner.webp',
-            images: ['/temp-cleaner.webp'],
-            technologies: ['C#', '.NET 8', 'WPF'],
-            reason: 'I wanted a one‑click tool to keep my system clean without manual effort.',
-            githubLink: 'https://github.com/AliAl-ojeely/TempCleaner',
-        },
+        image: "/temp-cleaner.webp",
+        images: ["/temp-cleaner.webp"],
+        technologies: ["C#", ".NET 8", "WPF"],
+        reason:
+          "I wanted a one‑click tool to keep my system clean without manual effort.",
+        githubLink: "https://github.com/AliAl-ojeely/TempCleaner",
+      },
 
-        // ---- 4. Tic‑Tac‑Toe (Windows Forms) ----
-        {
-            id: 4,
-            title: 'Tic‑Tac‑Toe',
-            description: `Overview: A modernized, desktop-native implementation of the classic Tic-Tac-Toe game, featuring an intelligent game loop and a polished graphical interface.
+      // ---- 4. Tic‑Tac‑Toe (Windows Forms) ----
+      {
+        id: 4,
+        title: "Tic‑Tac‑Toe",
+        description: `Overview: A modernized, desktop-native implementation of the classic Tic-Tac-Toe game, featuring an intelligent game loop and a polished graphical interface.
 
 Core Features:
 • Smart Game Engine: Instantly calculates win states across all rows, columns, and diagonals, while accurately detecting gridlock draws.
@@ -85,18 +100,19 @@ Core Features:
 • Responsive UI: Features active-turn indicators, hover effects on playable grids, and a custom dark theme that modernizes the classic Windows Forms look.
 
 Technical Architecture: Built using C# and Windows Forms. The project heavily emphasizes event-driven programming, custom UI control manipulation, and strict 2D array logic for grid validation. It serves as a practical demonstration of object-oriented UI design and state management within the .NET ecosystem.`,
-            image: '/tic-tac-toe-1.webp',
-            images: ['/tic-tac-toe-1.webp', '/tic-tac-toe-2.webp'],
-            technologies: ['C#', 'Windows Forms'],
-            reason: 'I built this to strengthen my OOP skills and Windows Forms UI handling.',
-            githubLink: 'https://github.com/AliAl-ojeely/tic-tac-toe-winforms',
-        },
+        image: "/tic-tac-toe-1.webp",
+        images: ["/tic-tac-toe-1.webp", "/tic-tac-toe-2.webp"],
+        technologies: ["C#", "Windows Forms"],
+        reason:
+          "I built this to strengthen my OOP skills and Windows Forms UI handling.",
+        githubLink: "https://github.com/AliAl-ojeely/tic-tac-toe-winforms",
+      },
 
-        // ---- 5. Bank System (OOP) ----
-        {
-            id: 5,
-            title: 'Bank System (OOP)',
-            description: `Overview: An enterprise-grade, console-based financial management system engineered from the ground up to rigorously demonstrate the four core pillars of Object-Oriented Programming.
+      // ---- 5. Bank System (OOP) ----
+      {
+        id: 5,
+        title: "Bank System (OOP)",
+        description: `Overview: An enterprise-grade, console-based financial management system engineered from the ground up to rigorously demonstrate the four core pillars of Object-Oriented Programming.
 
 Core Features:
 • Comprehensive Account Management: Supports full client lifecycles, including account creation, modification, and deletion.
@@ -104,18 +120,19 @@ Core Features:
 • Security & Auditing: Implements a Role-Based Access Control (RBAC) system separating standard users from administrators, coupled with an automated, tamper-proof activity logging system for all logins and transactions.
 
 Technical Architecture: Written purely in standard C++. The architecture heavily utilizes Encapsulation (securing sensitive balance data), Inheritance (deriving specific user types from base Person classes), Polymorphism (overriding interface behaviors), and Abstraction (hiding complex file I/O operations). Data persistence is managed via secure, flat-text file databases.`,
-            image: '/Bank System OOP (C++).webp',
-            images: [],
-            technologies: ['C++', 'OOP'],
-            reason: 'I developed this to apply real‑world OOP concepts learned in university.',
-            githubLink: 'https://github.com/AliAl-ojeely/Bank_System_OOP',
-        },
+        image: "/Bank System OOP (C++).webp",
+        images: [],
+        technologies: ["C++", "OOP"],
+        reason:
+          "I developed this to apply real‑world OOP concepts learned in university.",
+        githubLink: "https://github.com/AliAl-ojeely/Bank_System_OOP",
+      },
 
-        // ---- 6. To‑Do List (C++ Active Record) ----
-        {
-            id: 6,
-            title: 'To‑Do List (Active Record)',
-            description: `Overview: A highly structured, console-based task management application that transcends basic procedural programming by implementing professional software design patterns.
+      // ---- 6. To‑Do List (C++ Active Record) ----
+      {
+        id: 6,
+        title: "To‑Do List (Active Record)",
+        description: `Overview: A highly structured, console-based task management application that transcends basic procedural programming by implementing professional software design patterns.
 
 Core Features:
 • Full CRUD Functionality: Users can seamlessly Create, Read, Update, and Delete tasks, with the system automatically handling unique ID generation.
@@ -123,18 +140,19 @@ Core Features:
 • Audit Logging: Tracks the exact timestamps for task creation and completion, maintaining a historical record of user productivity.
 
 Technical Architecture: Developed in C++ utilizing the "Active Record" architectural design pattern. In this system, the \`clsWork\` object encapsulates both the task data and the database access logic, allowing the object to save, update, or delete itself directly from the underlying text-file database. This demonstrates advanced structural planning and memory management.`,
-            image: '/To-Do List (C++).webp',
-            images: [],
-            technologies: ['C++', 'OOP', 'Active Record Pattern'],
-            reason: 'I wanted to demonstrate mastery of C++ and advanced software architecture.',
-            githubLink: 'https://github.com/AliAl-ojeely/ToDo-List',
-        },
+        image: "/To-Do List (C++).webp",
+        images: [],
+        technologies: ["C++", "OOP", "Active Record Pattern"],
+        reason:
+          "I wanted to demonstrate mastery of C++ and advanced software architecture.",
+        githubLink: "https://github.com/AliAl-ojeely/ToDo-List",
+      },
 
-        // ---- 7. Rock Paper Scissors Game ----
-        {
-            id: 7,
-            title: 'Rock Paper Scissors Game',
-            description: `Overview: An interactive, algorithmic console game that pits the user against an unpredictable, computer-controlled opponent in customizable match lengths.
+      // ---- 7. Rock Paper Scissors Game ----
+      {
+        id: 7,
+        title: "Rock Paper Scissors Game",
+        description: `Overview: An interactive, algorithmic console game that pits the user against an unpredictable, computer-controlled opponent in customizable match lengths.
 
 Core Features:
 • Dynamic Matchmaking: Users can configure matches to last anywhere from a quick single round to a grueling 10-round championship.
@@ -142,18 +160,19 @@ Core Features:
 • Statistical Wrap-Up: Generates a detailed post-match summary screen calculating final win/loss ratios and crowning the ultimate champion.
 
 Technical Architecture: Built in C++, the project focuses on precise control flow, algorithmic Random Number Generation (RNG) for the AI opponent's logic, and direct manipulation of the Windows console buffer for color and sound outputs.`,
-            image: '/Rock Paper Scissors Game (C++).webp',
-            images: [],
-            technologies: ['C++'],
-            reason: 'A quick project to practise conditional logic, loops, and randomisation.',
-            githubLink: 'https://github.com/AliAl-ojeely/rock-paper-scissors-game',
-        },
+        image: "/Rock Paper Scissors Game (C++).webp",
+        images: [],
+        technologies: ["C++"],
+        reason:
+          "A quick project to practise conditional logic, loops, and randomisation.",
+        githubLink: "https://github.com/AliAl-ojeely/rock-paper-scissors-game",
+      },
 
-        // ---- 8. Math Questions Game ----
-        {
-            id: 8,
-            title: 'Math Questions Game',
-            description: `Overview: A highly customizable, educational training tool designed to procedurally generate arithmetic problems to test and improve the user's mental math speed.
+      // ---- 8. Math Questions Game ----
+      {
+        id: 8,
+        title: "Math Questions Game",
+        description: `Overview: A highly customizable, educational training tool designed to procedurally generate arithmetic problems to test and improve the user's mental math speed.
 
 Core Features:
 • Procedural Generation: Dynamically creates unique math equations based on user-selected parameters, ensuring no two quizzes are exactly alike.
@@ -161,18 +180,19 @@ Core Features:
 • Instant Grading: Provides immediate visual feedback per question, cleanly handling invalid inputs, and concludes with a comprehensive Pass/Fail performance report detailing accuracy percentages.
 
 Technical Architecture: Developed in C++, this application showcases mastery over complex nested loops, switch-case routing, mathematical algorithm generation, and robust input sanitization to prevent application crashes from unexpected user keystrokes.`,
-            image: '/Math Questions Game (C++).webp',
-            images: [],
-            technologies: ['C++'],
-            reason: 'I built it to help younger students practise mental math in a fun, interactive way.',
-            githubLink: 'https://github.com/AliAl-ojeely/math-questions-game',
-        },
+        image: "/Math Questions Game (C++).webp",
+        images: [],
+        technologies: ["C++"],
+        reason:
+          "I built it to help younger students practise mental math in a fun, interactive way.",
+        githubLink: "https://github.com/AliAl-ojeely/math-questions-game",
+      },
 
-        // ---- 9. UST Admin Dashboard ----
-        {
-            id: 9,
-            title: 'UST Admin Dashboard',
-            description: `Overview: A secure, high-performance web-based control panel engineered specifically for moderators of the UST Community platform to maintain platform integrity.
+      // ---- 9. UST Admin Dashboard ----
+      {
+        id: 9,
+        title: "UST Admin Dashboard",
+        description: `Overview: A secure, high-performance web-based control panel engineered specifically for moderators of the UST Community platform to maintain platform integrity.
 
 Core Features:
 • Comprehensive User Management: Empowers administrators to assign roles, edit profile metadata, and enforce community guidelines via account suspension toggles.
@@ -180,18 +200,19 @@ Core Features:
 • Live Audit Trail: Deeply integrated with a real-time activity logging system that monitors user behavior, administrative actions, and overall platform health.
 
 Technical Architecture: Architected entirely in React.js, focusing heavily on responsive component design, complex state management, and secure asynchronous API routing. The frontend is designed to efficiently parse and render large arrays of user data and live log streams without suffering performance bottlenecks.`,
-            image: '/UST Admin Dashboard (React.js).webp',
-            images: [],
-            technologies: ['React.js', 'JavaScript', 'Real‑time'],
-            reason: 'I developed it to efficiently manage the university community platform.',
-            githubLink: 'https://github.com/AliAl-ojeely/ust-admin-dashboard',
-        },
+        image: "/UST Admin Dashboard (React.js).webp",
+        images: [],
+        technologies: ["React.js", "JavaScript", "Real‑time"],
+        reason:
+          "I developed it to efficiently manage the university community platform.",
+        githubLink: "https://github.com/AliAl-ojeely/ust-admin-dashboard",
+      },
 
-        // ---- 10. Windows Defender Blocker ----
-    {
-      id: 10,
-      title: 'Windows Defender Blocker',
-      description: `Overview: A lightweight Windows Forms application that gives users one‑click control over Windows Defender, using official Group Policy registry keys for safe, reversible changes.
+      // ---- 10. Windows Defender Blocker ----
+      {
+        id: 10,
+        title: "Windows Defender Blocker",
+        description: `Overview: A lightweight Windows Forms application that gives users one‑click control over Windows Defender, using official Group Policy registry keys for safe, reversible changes.
 
 Core Features:
 • Disable Defender: Turns off Real‑Time Protection, Cloud‑delivered Protection, Automatic Sample Submission, and Tamper Protection (with a prompt guiding the user to manually disable Tamper Protection first).
@@ -201,17 +222,18 @@ Core Features:
 • Direct Access: Opens the Windows Security Virus & Threat Protection settings page directly from the app.
 
 Technical Architecture: Built with C# and .NET Framework 4.8 / Windows Forms. It modifies Group Policy registry keys (under HKLM\\Software\\Policies\\Microsoft\\Windows Defender) – the same method used by enterprise administrators – without deleting files or altering services. The UI follows KISS (Keep It Simple, Stupid) principles for a clean, straightforward experience.`,
-      image: '/Windows Defender Blocker.webp',
-      images: ['/Windows Defender Blocker.webp'],
-      technologies: ['C#', '.NET Framework', 'Windows Forms'],
-      reason: 'I wanted a simple, reversible tool to control Windows Defender without breaking the system.',
-        githubLink: 'https://github.com/AliAl-ojeely/Windows-Defender-Blocker',
-    },
-        // ---- 11. Click2Key ----
-        {
-            id: 11,
-            title: 'Click2Key',
-            description: `Overview: A modern WPF desktop application that puts over 100 Windows keyboard shortcuts at your fingertips. Instead of memorizing complex key combinations, users can execute any shortcut with a single mouse click – optionally adding a countdown delay like the Windows Snipping Tool.
+        image: "/Windows Defender Blocker.webp",
+        images: ["/Windows Defender Blocker.webp"],
+        technologies: ["C#", ".NET Framework", "Windows Forms"],
+        reason:
+          "I wanted a simple, reversible tool to control Windows Defender without breaking the system.",
+        githubLink: "https://github.com/AliAl-ojeely/Windows-Defender-Blocker",
+      },
+      // ---- 11. Click2Key ----
+      {
+        id: 11,
+        title: "Click2Key",
+        description: `Overview: A modern WPF desktop application that puts over 100 Windows keyboard shortcuts at your fingertips. Instead of memorizing complex key combinations, users can execute any shortcut with a single mouse click – optionally adding a countdown delay like the Windows Snipping Tool.
 
 Core Features:
 • 105+ Shortcuts: Covers file management (Ctrl+C, Ctrl+V), system tools (Win+E, Win+I), navigation, virtual desktops, gaming (Win+G, Win+Alt+R), and accessibility (Win+U, Win+Ctrl+O).
@@ -223,18 +245,27 @@ Core Features:
 • Professional Installer: Built with Inno Setup – installs with a desktop shortcut and uninstaller.
 
 Technical Architecture: Initially built with C# .NET Framework 4.8 / Windows Forms using custom UserControls inside a FlowLayoutPanel. Performance bottlenecks from hundreds of controls led to a complete architectural rewrite. The rendering engine now uses a single WPF UserControl (hosted in a WinForms ElementHost) with virtualized painting, cached resources, and a custom-themed ComboBox for the delay timer. Shortcut simulation uses the Win32 API (keybd_event). The solution also includes a CI/CD pipeline via GitHub Actions that compiles and packages the application.`,
-            image: '/WPF-Main-App-Photo.webp',
-            images: ['/WPF-Main-App-Photo.webp', '/main-app-photo.webp'],
-            technologies: ['C#', '.NET Framework 4.8', 'WPF', 'Windows Forms', 'Win32 API', 'Inno Setup', 'GitHub Actions'],
-            reason: 'I wanted to make Windows keyboard shortcuts accessible to everyone – especially users who struggle to remember complex key combinations or who need a simple, visual way to execute them.',
-            githubLink: 'https://github.com/AliAl-ojeely/Click2Key',
-        },
+        image: "/WPF-Main-App-Photo.webp",
+        images: ["/WPF-Main-App-Photo.webp", "/main-app-photo.webp"],
+        technologies: [
+          "C#",
+          ".NET Framework 4.8",
+          "WPF",
+          "Windows Forms",
+          "Win32 API",
+          "Inno Setup",
+          "GitHub Actions",
+        ],
+        reason:
+          "I wanted to make Windows keyboard shortcuts accessible to everyone – especially users who struggle to remember complex key combinations or who need a simple, visual way to execute them.",
+        githubLink: "https://github.com/AliAl-ojeely/Click2Key",
+      },
 
-        // ---- 12. Folder Notifier ----
-        {
-            id: 12,
-            title: 'Folder Notifier',
-            description: `Overview: A lightweight Windows desktop application built with WPF (.NET 8) that lets you attach notes to any folder on your computer. Whenever that folder is opened through Windows File Explorer, the application automatically displays the linked note as a floating popup without modifying any of your files.
+      // ---- 12. Folder Notifier ----
+      {
+        id: 12,
+        title: "Folder Notifier",
+        description: `Overview: A lightweight Windows desktop application built with WPF (.NET 8) that lets you attach notes to any folder on your computer. Whenever that folder is opened through Windows File Explorer, the application automatically displays the linked note as a floating popup without modifying any of your files.
 
 Core Features:
 • Folder-based Notes: Attach notes to any folder; they pop up immediately when the folder is opened.
@@ -244,16 +275,94 @@ Core Features:
 • Privacy First & Offline: No telemetry, no analytics, and no cloud synchronization. Everything is stored locally.
 
 Technical Architecture: Built using C# and WPF on the .NET 8 framework. The application uses Entity Framework Core with SQLite to manage local database storage seamlessly inside the user's AppData folder. It relies on the Windows Shell API for efficient real-time detection of opened folders and utilizes Hardcodet.NotifyIcon.Wpf for robust System Tray integration.`,
-            image: '/foldernotifir-main-page-en.webp',
-            images: [
-                '/foldernotifir-main-page-en.webp',
-                '/foldernotifir-main-page-ar.webp',
-                '/foldernotifir-message-note-en.webp',
-                '/foldernotifir-message-note-ar.webp'
-            ],
-            technologies: ['C#', '.NET 8', 'WPF', 'SQLite', 'Entity Framework Core', 'Windows Shell API'],
-            reason: 'I wanted a simple, privacy-focused way to attach context, reminders, or tasks to specific directories on my computer without altering the actual files. This ensures the notes are exactly where I need them, the moment I open a folder.',
-            githubLink: 'https://github.com/AliAl-ojeely/Folder-Notifier',
-        },
+        image: "/foldernotifir-main-page-en.webp",
+        images: [
+          "/foldernotifir-main-page-en.webp",
+          "/foldernotifir-main-page-ar.webp",
+          "/foldernotifir-message-note-en.webp",
+          "/foldernotifir-message-note-ar.webp",
+        ],
+        technologies: [
+          "C#",
+          ".NET 8",
+          "WPF",
+          "SQLite",
+          "Entity Framework Core",
+          "Windows Shell API",
+        ],
+        reason:
+          "I wanted a simple, privacy-focused way to attach context, reminders, or tasks to specific directories on my computer without altering the actual files. This ensures the notes are exactly where I need them, the moment I open a folder.",
+        githubLink: "https://github.com/AliAl-ojeely/Folder-Notifier",
+      },
+      {
+        id: 13,
+        title: "Game Translator",
+        description: `Overview: A professional, privacy-focused Windows desktop application designed to streamline video game localization through local AI models while keeping game files and translation data entirely under the user's control.
+
+Core Features:
+• Fully Offline Translation: Connects directly to locally hosted Large Language Models through OpenAI-compatible endpoints such as LM Studio, allowing translation workflows to run without sending proprietary game data to external cloud services.
+• Live Side-by-Side Translation: Displays original and translated strings in real time through an optimized virtualized DataGrid, making it easy to monitor large localization projects while translation is running.
+• Smart Translation Management: Automatically skips extremely long strings that could overload local models, tracks translated entries and characters, supports responsive cancellation, and provides configurable delays between requests to control GPU and CPU load.
+• Detailed Translation Reports: Generates a complete report after each translation session containing total processing time, translated entry counts, translated character totals, skipped string IDs, and a quick-copy list for manual review.
+• Safe JSON Processing: Preserves the original JSON structure while exporting correctly encoded UTF-8 Arabic text without unwanted Unicode escaping, with options to overwrite the source file or save the result as a separate copy.
+• Persistent Configuration: Automatically remembers API endpoints, selected AI models, translation prompts, throttling settings, and other user preferences between sessions.
+• Custom Prompt Engineering: Allows translation prompts to be customized for different games, genres, writing styles, and localization requirements.
+
+Technical Architecture: Built with C# and WPF on .NET 8 using the MVVM architectural pattern for a clean separation between the interface, application state, services, and data models. CommunityToolkit.Mvvm is used for MVVM infrastructure, System.Text.Json handles localization files, and System.Net.Http communicates with OpenAI-compatible REST APIs. The application is designed around offline-first operation, local AI integration, maintainable architecture, and reliable processing of large game localization files.`,
+        image: "/game-trasnlator-main-page.webp",
+        images: [
+          "/game-trasnlator-main-page.webp",
+          "/game-trasnlator-report-page.webp",
+          "/game-trasnlator-settings-page.webp",
+        ],
+        technologies: [
+          "C#",
+          ".NET 8",
+          "WPF",
+          "MVVM",
+          "CommunityToolkit.Mvvm",
+          "System.Text.Json",
+          "OpenAI-Compatible API",
+          "LM Studio",
+        ],
+        reason:
+          "I built Game Translator to create a private and efficient AI-assisted localization workflow for large game files, allowing translators to use powerful local language models without sacrificing privacy or control over their data.",
+        githubLink: "https://github.com/AliAl-ojeely/Game-Translator",
+      },
+
+      {
+        id: 14,
+        title: "Arabic L10 Hub",
+        description: `Overview: An independent, non-profit web platform created as a dedicated archive and distribution hub for Arabic video game localization patches and mods. The platform is designed to preserve the work of independent Arabic localizers while providing players with a stable and accessible place to discover and download localization projects.
+
+Core Features:
+• Permanent Localization Archive: Provides a centralized home for Arabic game localization patches and mods, helping protect community projects from disappearing when external hosting platforms or download links become unavailable.
+• Completely Ad-Free Experience: The platform is non-profit and intentionally avoids advertisements, intrusive redirects, and monetized shortened links to provide a clean and trustworthy experience.
+• Multi-Platform Localization Support: Designed to host localization projects and modifications targeting Windows as well as other supported platforms such as Linux.
+• Interactive Game Galleries: Each localization project can include multiple screenshots presented through thumbnail galleries with an enlarged image viewer for easier navigation and project previewing.
+• Structured Game Information: Dedicated pages provide organized information about individual localization projects, allowing visitors to explore available translations and their associated game details.
+• Arabic-First Responsive Interface: Features a modern responsive design developed specifically around Arabic content and Right-To-Left presentation while remaining usable across desktop and mobile screen sizes.
+• Dedicated Navigation Structure: Uses multiple application views for the home page, translations archive, individual game details, about information, and contact functionality.
+
+Technical Architecture: Developed as a modern React.js single-page application using React Router v6 for client-side navigation, Vite for fast development and optimized production builds, and CSS Modules for isolated component styling. The platform is deployed through GitHub Pages, providing a lightweight and reliable static hosting environment for the localization community.`,
+        image: "/arabic-L10-hub-1.webp",
+        images: [
+          "/arabic-L10-hub-1.webp",
+          "/arabic-L10-hub-2.webp",
+          "/arabic-L10-hub-3.webp",
+          "/arabic-L10-hub-4.webp",
+        ],
+        technologies: [
+          "React.js",
+          "JavaScript",
+          "React Router v6",
+          "Vite",
+          "CSS Modules",
+          "GitHub Pages",
+        ],
+        reason:
+          "I created Arabic L10 Hub to provide Arabic game localizers and players with a permanent, independent, and ad-free platform where localization projects can be preserved, presented professionally, and accessed without relying entirely on third-party services.",
+        githubLink: "https://alial-ojeely.github.io/Arabic-L10-Hub/",
+      },
     ];
 }
