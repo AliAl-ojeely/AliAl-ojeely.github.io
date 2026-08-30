@@ -46,52 +46,48 @@ export default function Home() {
     );
 
     useEffect(() => {
-        let cancelled = false;
+      let cancelled = false;
 
-        async function load() {
-            setLoading(true);
+      async function load() {
+        setLoading(true);
 
-            const portfolioLoader =
-                language === 'ar'
-                    ? fetchPortfolioDataAr
-                    : fetchPortfolioDataEn;
+        const portfolioLoader =
+          language === "ar" ? fetchPortfolioDataAr : fetchPortfolioDataEn;
 
-            const certificateLoader =
-                language === 'ar'
-                    ? fetchCertificatesAr
-                    : fetchCertificatesEn;
+        const certificateLoader =
+          language === "ar" ? fetchCertificatesAr : fetchCertificatesEn;
 
-            const [portfolioData, certificateData] = await Promise.all([
-                portfolioLoader(),
-                certificateLoader(),
-            ]);
+        const [portfolioData, certificateData] = await Promise.all([
+          portfolioLoader(),
+          certificateLoader(),
+        ]);
 
-            await PortfolioItem.loadFromSource(portfolioData);
-            await Certificate.loadFromSource(certificateData);
+        await PortfolioItem.loadFromSource(portfolioData);
+        await Certificate.loadFromSource(certificateData);
 
-            if (cancelled) {
-                return;
-            }
-
-            const allItems = PortfolioItem.findAll();
-            const allCertificates = Certificate.findAll();
-
-            setItems(allItems);
-            setFilteredItems(allItems);
-            setCertificates(allCertificates);
-            setLoading(false);
+        if (cancelled) {
+          return;
         }
 
-        load();
+        const allItems = PortfolioItem.findAll();
+        const allCertificates = Certificate.findAll();
 
-        const timer = setTimeout(() => {
-            setInitialAnim(false);
-        }, 3000);
+        setItems(allItems);
+        setFilteredItems(allItems);
+        setCertificates(allCertificates);
+        setLoading(false);
+      }
 
-        return () => {
-            cancelled = true;
-            clearTimeout(timer);
-        };
+      load();
+
+      const timer = setTimeout(() => {
+        setInitialAnim(false);
+      }, 3000);
+
+      return () => {
+        cancelled = true;
+        clearTimeout(timer);
+      };
     }, [language]);
 
     const toggleExpand = (id) => {
