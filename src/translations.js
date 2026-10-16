@@ -12,7 +12,8 @@ const translations = {
         viewProjects: 'View Projects',
         github: 'GitHub',
         linkedin: 'LinkedIn',
-        downloadCV: 'Download CV',
+        downloadCV: 'Download CV | En',
+        downloadCVArabic: 'Download CV | Ar',
 
         // About
         aboutTitle: 'About Me',
@@ -64,7 +65,8 @@ const translations = {
         viewProjects: 'عرض المشاريع',
         github: 'GitHub',
         linkedin: 'LinkedIn',
-        downloadCV: 'تحميل السيرة الذاتية',
+        downloadCV: 'تحميل السيرة الذاتية | En',
+        downloadCVArabic: 'تحميل السيرة الذاتية | Ar',
 
         // About
         aboutTitle: 'نبذة عني',
